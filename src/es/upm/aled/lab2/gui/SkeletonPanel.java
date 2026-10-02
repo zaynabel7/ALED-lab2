@@ -62,8 +62,12 @@ public class SkeletonPanel extends JPanel {
 		if (node.getChildren().size() == 0) {
 			return;
 		}
-		for (Node child : node.getChildren()) {
-			drawSkeleton(g, node.getX(), node.getY(), child);
+		for (Node child : node.getChildren()) {                 //recorre cada nodo de la lista
+			drawSkeleton(g, node.getX(), node.getY(), child);   //cada nodo lo dibuja
 		}
 	}
 }
+
+//cada nodo tiene sus propios nodos, primero se dibuja el root y luego me meto dentro del bucle for y recorro sus nodos hijos
+//por ejemplo el primer nodo va a tener 2 nodos hijos
+//1º bucle for, va a ejecutarse drawSkeleton(g, node.getX(), node.getY(), child) y 
